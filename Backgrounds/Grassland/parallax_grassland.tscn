@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://cdjkl5h1vp1gj"]
+
+[ext_resource type="Texture2D" uid="uid://rclvfh0gjaui" path="res://Backgrounds/Grassland/BG1_4.png" id="1_wntxi"]
+[ext_resource type="Texture2D" uid="uid://dwqqx1vu2duah" path="res://Backgrounds/Grassland/BG1_3.png" id="2_ehav6"]
+[ext_resource type="Texture2D" uid="uid://04auvgv7rrsc" path="res://Backgrounds/Grassland/BG1_2.png" id="3_dnbk8"]
+[ext_resource type="Texture2D" uid="uid://bapke0vhlqtdg" path="res://Backgrounds/Grassland/BG1_1.png" id="4_dbrl1"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+follow_viewport_scale = 37.232
+
+[node name="Layer 1" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+position = Vector2(0, 105)
+motion_scale = Vector2(0, 0)
+motion_offset = Vector2(0, -248)
+motion_mirroring = Vector2(512, 0)
+
+[node name="Background" type="Sprite2D" parent="Layer 1"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(0, 105)
+texture = ExtResource("1_wntxi")
+centered = false
+
+[node name="Layer 2" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+position = Vector2(0, 105)
+motion_scale = Vector2(0.1, 0.1)
+motion_offset = Vector2(0, -248)
+motion_mirroring = Vector2(512, 0)
+
+[node name="Hills" type="Sprite2D" parent="Layer 2"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(0, 105)
+texture = ExtResource("2_ehav6")
+centered = false
+
+[node name="Layer 3" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+position = Vector2(0, 105)
+motion_scale = Vector2(0.2, 0.2)
+motion_offset = Vector2(0, -248)
+motion_mirroring = Vector2(512, 0)
+
+[node name="Trees n Hills" type="Sprite2D" parent="Layer 3"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(0, 105)
+texture = ExtResource("3_dnbk8")
+centered = false
+
+[node name="Layer 4" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+position = Vector2(0, 105)
+motion_scale = Vector2(0.3, 0.3)
+motion_offset = Vector2(0, -248)
+motion_mirroring = Vector2(512, 0)
+
+[node name="Trees" type="Sprite2D" parent="Layer 4"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(0, 105)
+texture = ExtResource("4_dbrl1")
+centered = false

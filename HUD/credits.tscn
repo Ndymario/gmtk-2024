@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://co75rgk81ogoa"]
+
+[ext_resource type="Texture2D" uid="uid://c7undblun580h" path="res://HUD/credits.png" id="1_k03n6"]
+[ext_resource type="Script" path="res://HUD/credits.gd" id="2_63osl"]
+
+[node name="Credits" type="Sprite2D"]
+position = Vector2(256, 224)
+texture = ExtResource("1_k03n6")
+script = ExtResource("2_63osl")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

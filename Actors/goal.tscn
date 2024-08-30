@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://clty16qb65he7"]
+
+[ext_resource type="Texture2D" uid="uid://ca2gulaq66d4t" path="res://Sprites/Goal/goal_back.png" id="1_61i1d"]
+[ext_resource type="Texture2D" uid="uid://coridwfhcq0k7" path="res://Sprites/Goal/goal_front.png" id="2_hq0c6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_26b2p"]
+size = Vector2(20, 762)
+
+[node name="Goal" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -379)
+shape = SubResource("RectangleShape2D_26b2p")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -10
+texture_filter = 1
+position = Vector2(-16, -128)
+texture = ExtResource("1_61i1d")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+z_index = 10
+texture_filter = 1
+position = Vector2(24, -128)
+texture = ExtResource("2_hq0c6")

@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://cjjvdxvjwiakk"]
+
+[ext_resource type="Texture2D" uid="uid://0vhbbmh2dut8" path="res://Sprites/Cursor/cursor_pinch.png" id="1_5ccxf"]
+[ext_resource type="Script" path="res://Actors/pointer.gd" id="1_pw2qk"]
+[ext_resource type="Texture2D" uid="uid://camam3ar2rkoa" path="res://Sprites/Cursor/cursor_point.png" id="2_j74p2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tdjss"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_5ccxf")
+}],
+"loop": true,
+"name": &"pinch",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_j74p2")
+}],
+"loop": true,
+"name": &"point",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_edb25"]
+size = Vector2(10, 10)
+
+[node name="Pointer" type="AnimatedSprite2D"]
+texture_filter = 1
+position = Vector2(-9.53674e-07, 0)
+sprite_frames = SubResource("SpriteFrames_tdjss")
+animation = &"point"
+offset = Vector2(8, 13)
+script = ExtResource("1_pw2qk")
+
+[node name="PointerArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PointerArea"]
+position = Vector2(9.53674e-07, 4.76837e-07)
+shape = SubResource("RectangleShape2D_edb25")
+
+[connection signal="area_entered" from="PointerArea" to="." method="_on_area_2d_area_entered"]

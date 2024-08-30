@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://itwhnho5j3a"]
+
+[ext_resource type="Texture2D" uid="uid://b3ex6wvehg83v" path="res://Backgrounds/Underground/BG2_4.png" id="1_11t0p"]
+[ext_resource type="Texture2D" uid="uid://d1486hcjmp3r4" path="res://Backgrounds/Underground/BG2_3.png" id="2_2vd4t"]
+[ext_resource type="Texture2D" uid="uid://bfjex81mp06am" path="res://Backgrounds/Underground/BG2_2.png" id="3_gqclg"]
+[ext_resource type="Texture2D" uid="uid://dx8r1eoraoyl" path="res://Backgrounds/Underground/BG2_1.png" id="4_jsqim"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+follow_viewport_scale = 37.232
+
+[node name="Layer 1" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+position = Vector2(0, 105)
+motion_scale = Vector2(0, 0)
+motion_offset = Vector2(0, -248)
+motion_mirroring = Vector2(512, 0)
+
+[node name="Background" type="Sprite2D" parent="Layer 1"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(0, 105)
+texture = ExtResource("1_11t0p")
+centered = false
+
+[node name="Layer 2" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+position = Vector2(0, 105)
+motion_scale = Vector2(0.1, 0.1)
+motion_offset = Vector2(0, -248)
+motion_mirroring = Vector2(512, 0)
+
+[node name="Hills" type="Sprite2D" parent="Layer 2"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(0, 105)
+texture = ExtResource("2_2vd4t")
+centered = false
+
+[node name="Layer 3" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+position = Vector2(0, 105)
+motion_scale = Vector2(0.2, 0.2)
+motion_offset = Vector2(0, -248)
+motion_mirroring = Vector2(512, 0)
+
+[node name="Trees n Hills" type="Sprite2D" parent="Layer 3"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(0, 105)
+texture = ExtResource("3_gqclg")
+centered = false
+
+[node name="Layer 4" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+position = Vector2(0, 105)
+motion_scale = Vector2(0.3, 0.3)
+motion_offset = Vector2(0, -248)
+motion_mirroring = Vector2(512, 0)
+
+[node name="Trees" type="Sprite2D" parent="Layer 4"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(0, 105)
+texture = ExtResource("4_jsqim")
+centered = false
